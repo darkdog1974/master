@@ -28,4 +28,9 @@ export class UsersComponent implements OnInit {
     this.utenti = this.uService.getUsers();
   }
 
+  deleteUser(user){
+    alert ("delete user: " + user.key);
+   //this.uService.removeUser();
+  }
+
 }
