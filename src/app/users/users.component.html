@@ -6,14 +6,14 @@
     <th>Codice Fiscale</th>
     <th>E-Mail</th>
     <th>Provincia</th>
+    <th>Data Nascita</th>
   </tr>
-  {{utenti}}
+  <tr *ngFor="let utente of utenti | async">
+    <td>{{ utente.NOME }}</td>
+    <td>{{ utente.COGNOME }}</td>
+    <td>{{ utente.CODICE_FISCALE }}</td>
+    <td>{{ utente.EMAIL }}</td>
+    <td>{{ utente.ID_PROVINCIA }}</td>
+    <td>{{ utente.DATA_NASCITA }}</td>
+  </tr>
 </table>
-
-
-<ul>
-	<li *ngFor="let utente of utenti | async">
-		{{ utente.NOME }} {{ utente.COGNOME }}
-		<!--{{ utente | json }}-->
-	</li>
-</ul>
