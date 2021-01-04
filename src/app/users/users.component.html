@@ -8,3 +8,11 @@
     <th>Provincia</th>
   </tr>
 </table>
+
+
+<ul>
+	<li *ngFor="let utente of utenti | async">
+		{{ utente.NOME }} {{ utente.COGNOME }}
+		<!--{{ utente | json }}-->
+	</li>
+</ul>
