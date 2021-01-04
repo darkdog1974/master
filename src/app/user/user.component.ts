@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  // 'user-data' è l'alias con il quale viene identificato la variabile user
   @Input('user-data') user: any;
 
   constructor() { }
