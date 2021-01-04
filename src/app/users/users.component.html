@@ -8,7 +8,7 @@
     <th>Provincia</th>
     <th>Data Nascita</th>
   </tr>
-  <tr *ngFor="let utente of utenti | async">
-    <app-user [user-data] = "utente"></app-user>
+  <tr app-user *ngFor="let utente of utenti | async" [user-data] = "utente">
+    <!-- <app-user [user-data] = "utente"></app-user> -->
   </tr>
 </table>
