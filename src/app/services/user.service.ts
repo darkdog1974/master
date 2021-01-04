@@ -18,16 +18,17 @@ export class UserService {
   getUsers() {
     //return this.utenti;
 
-    userList: Array<User>();
+    //userList: Array<User>();
 
   // Use snapshotChanges().map() to store the key
-    this.items = this.itemsRef.snapshotChanges().pipe(
+    //this.items = 
+    this.itemsRef.snapshotChanges().pipe(
       map(changes => 
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )
     );
 
-    alert (this.items);
+   // alert (this.items);
     /*
     this.af
       .list("/UTENTI")
