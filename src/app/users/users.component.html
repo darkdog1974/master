@@ -9,7 +9,7 @@
     <th>Data Nascita</th>
     <th>Actions</th>
   </tr>
-  <tr app-user *ngFor="let utente of utenti | async" [user-data] = "utente">
+  <tr app-user *ngFor="let utente of utenti | async" [user-data] = "utente" (user-delete) = "deleteUser($event)">
     <!-- <app-user [user-data] = "utente"></app-user> -->
   </tr>
 </table>
