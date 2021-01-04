@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
 
 @Component({
   /* 

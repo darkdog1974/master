@@ -13,24 +13,6 @@ export class UserService {
   }
 
   getUsers() {
-
-  this.usersRef.snapshotChanges().pipe(
-      map(changes => 
-        changes.map(c => ( alert(c.payload.key)
-          /*{ 
-          id: c.payload.key,
-          name: c.payload.ref.key,
-          lastname: "",
-          email: "",
-          fiscalCode: "",
-          idProvince: "",
-          birthDay: "",
-          age: 0}*/
-          ))
-      )
-    );
-
-
   // Use snapshotChanges().map() to store the key
    return this.usersRef.snapshotChanges().pipe(
       map(changes => 
@@ -39,13 +21,17 @@ export class UserService {
           ))
       )
     );
-
-    
   }
 
-  removeUser() {}
+  removeUser(user: any) {
+     this.usersRef.remove(user.key);
+  }
 
-  addUser() {}
+  addUser(user: any) {
+    this.usersRef.push({ key: user.key, NOME: user.NOME });
+  }
 
-  updateUser() {}
+  updateUser(user: any, field: string, value: string) {
+    this.usersRef.update(user.key, { field: value });
+  }
 }
