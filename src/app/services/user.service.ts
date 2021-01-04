@@ -12,11 +12,11 @@ export class UserService {
     private af: AngularFireDatabase,
     private firestore: AngularFirestore
   ) {
-    //this.utenti = af.list('/UTENTI').valueChanges();
+    this.utenti = af.list('/UTENTI').valueChanges();
   }
 
   getUsers() {
-    //return this.utenti;
+    return this.utenti;
 
     return this.af
       .list("/UTENTI")
