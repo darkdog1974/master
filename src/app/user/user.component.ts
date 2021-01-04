@@ -10,7 +10,7 @@ import { Component, EventEmitter,  Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  // 'user-data' è l'alias con il quale viene identificato la variabile user
+  // 'user-data' e 'user-delete' sono gli alias con cui vengono identificati le variabili all'esterno
   @Input('user-data') user: any;
   @Output('user-delete') deleteUser = new EventEmitter();
 
@@ -20,9 +20,8 @@ export class UserComponent implements OnInit {
   }
 
   removeUser(){
-    console.log ("remove user: " + this.user.key);
-    this.deleteUser.emit(this.user);
-    
+    // richiamo il padre per effettuare la cancellazione
+    this.deleteUser.emit(this.user); 
   }
 
 }

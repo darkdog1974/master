@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
 
   deleteUser(user){
     alert ("delete user: " + user.key);
-   //this.uService.removeUser();
+    this.uService.removeUser(user);
   }
 
 }
