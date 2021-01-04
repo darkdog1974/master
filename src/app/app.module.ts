@@ -10,6 +10,7 @@ import { environment } from "../environments/environment";
 import { NavComponent } from './nav/nav.component';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './users/user.service';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { UserService } from './users/user.service';
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule // imports firebase/firestore, only needed for database features
   ],
-  declarations: [AppComponent, UmsComponent, NavComponent, UsersComponent],
+  declarations: [AppComponent, UmsComponent, NavComponent, UsersComponent, UserComponent],
   bootstrap: [AppComponent],
   providers: [UserService]
 })

@@ -9,11 +9,6 @@
     <th>Data Nascita</th>
   </tr>
   <tr *ngFor="let utente of utenti | async">
-    <td>{{ utente.NOME }}</td>
-    <td>{{ utente.COGNOME }}</td>
-    <td>{{ utente.CODICE_FISCALE }}</td>
-    <td>{{ utente.EMAIL }}</td>
-    <td>{{ utente.ID_PROVINCIA }}</td>
-    <td>{{ utente.DATA_NASCITA }}</td>
+    <app-user></app-user>
   </tr>
 </table>
