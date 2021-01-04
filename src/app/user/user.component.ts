@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 @Component({
   /* 
@@ -18,8 +19,8 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteUser(user){
-    alert ("delete user" + user.nome);
+  deleteUser(){
+    alert ("delete user: " + this.user);
   }
 
 }
