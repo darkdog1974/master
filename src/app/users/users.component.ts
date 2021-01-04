@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import {AngularFireDatabase} from '@angular/fire/database';  
 import { Observable } from 'rxjs';
-import { UserService } from './user.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-users',
