@@ -9,6 +9,7 @@ import { UmsComponent } from "./ums.component";
 import { environment } from "../environments/environment";
 import { NavComponent } from './nav/nav.component';
 import { UsersComponent } from './users/users.component';
+import { UserService } from './users/user.service';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { UsersComponent } from './users/users.component';
     AngularFirestoreModule // imports firebase/firestore, only needed for database features
   ],
   declarations: [AppComponent, UmsComponent, NavComponent, UsersComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [UserService]
 })
 export class AppModule {}
