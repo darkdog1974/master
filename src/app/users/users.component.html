@@ -9,6 +9,6 @@
     <th>Data Nascita</th>
   </tr>
   <tr *ngFor="let utente of utenti | async">
-    <app-user></app-user>
+    <app-user [user-data] = "utente"></app-user>
   </tr>
 </table>
