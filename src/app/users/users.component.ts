@@ -15,18 +15,17 @@ export class UsersComponent implements OnInit {
   utentiCollection: AngularFirestoreCollection<any>;
   utenti: Observable<any[]>;
 
-  constructor(afs: AngularFirestore, af: AngularFireDatabase, uService: UserService) {
+  constructor(afs: AngularFirestore, af: AngularFireDatabase, private uService: UserService) {
     // --- NON HA FUNZIONATO ---
     //this.utentiCollection = this.afs.collection("UTENTI");
     //this.utenti = afs.collection("UTENTI").valueChanges();
     // --- FUNZIONA ---
     //this.utenti = af.list('/UTENTI').valueChanges();
-    // --- PASSO PER UN SERVIZIO ---
-    this.utenti = uService.getUsers();
-
   }
 
   ngOnInit() {
+    // --- PASSO PER UN SERVIZIO ---
+    this.utenti = this.uService.getUsers();
   }
 
 }
