@@ -20,7 +20,8 @@ export class UserComponent implements OnInit {
   }
 
   deleteUser(){
-    alert ("delete user: " + this.user);
+    console.log ("delete user: " + this.user.key);
+    
   }
 
 }
