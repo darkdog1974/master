@@ -18,4 +18,8 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteUser(user){
+    alert ("delete user" + user.nome);
+  }
+
 }
