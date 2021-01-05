@@ -1,1 +1,17 @@
 /* Add application styles & imports to this file! */
+
+.main {
+  width: 98%;
+  margin: auto;
+  vertical-align: top;
+}
+
+.userList {
+  float: left;
+  width: 60%;
+}
+
+.userDetail {
+  float: left;
+  width: 40%;
+}
