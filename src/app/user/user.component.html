@@ -4,4 +4,9 @@
 <td>{{ user.EMAIL }}</td>
 <td>{{ user.ID_PROVINCIA }}</td>
 <td>{{ user.DATA_NASCITA }}</td>
-<td><button class="delete" (click)="removeUser()">DELETE</button></td>
+<td>
+  <button class="delete" (click)="removeUser()">DELETE</button>
+</td>
+<td>
+   <button class="add" (click)="pushUser()">ADD</button>
+</td>

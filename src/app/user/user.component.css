@@ -19,3 +19,7 @@ button {
 button.delete{
   color: red;
 }
+
+button.add{
+  color: blue;
+}

@@ -1,4 +1,5 @@
 import { Component, EventEmitter,  Input, OnInit, Output } from '@angular/core';
+import { User } from './user';
 
 @Component({
   /* 
@@ -13,6 +14,7 @@ export class UserComponent implements OnInit {
   // 'user-data' e 'user-delete' sono gli alias con cui vengono identificati le variabili all'esterno
   @Input('user-data') user: any;
   @Output('user-delete') deleteUser = new EventEmitter();
+  @Output('user-add')    addUser    = new EventEmitter();
 
   constructor() { }
 
@@ -24,8 +26,13 @@ export class UserComponent implements OnInit {
     this.deleteUser.emit(this.user); 
   }
 
-  addUser(){
-    this.user.key = "test";
+  pushUser(){
+    let u = new User;
+    u.key = 'ttest69';
+    u.name = 'Test';
+    u.lastname = 'Test';
+    u.birthDay = '12/12/1969';
+    this.addUser.emit(u);
   }
 
 }

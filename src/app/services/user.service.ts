@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { AngularFireDatabase, AngularFireList } from "@angular/fire/database";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { map, tap } from "rxjs/operators";
-import { User } from "../interfaces/user";
 
 @Injectable()
 export class UserService {
@@ -28,7 +27,7 @@ export class UserService {
   }
 
   addUser(user: any) {
-    this.usersRef.push({ key: user.key, NOME: user.NOME });
+    this.usersRef.push({ key: user.key, NOME: user.name, COGNOME: user.lastname });
   }
 
   updateUser(user: any, field: string, value: string) {

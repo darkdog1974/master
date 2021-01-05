@@ -1,6 +1,6 @@
-export interface User {
-  id: string;
-  name: any;
+export interface IUser {
+  key: string;
+  name: string;
   lastname: string;
   email: string;
   fiscalCode: string;

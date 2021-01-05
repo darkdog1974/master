@@ -33,4 +33,9 @@ export class UsersComponent implements OnInit {
     this.uService.removeUser(user);
   }
 
+  addUser(user){
+    alert ("add user: " + user.key);
+    this.uService.addUser(user);
+  }
+
 }
