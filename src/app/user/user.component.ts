@@ -35,4 +35,8 @@ export class UserComponent implements OnInit {
     this.addUser.emit(u);
   }
 
+  editUser(){
+    alert ("edit");
+  }
+
 }
