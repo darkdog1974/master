@@ -38,4 +38,8 @@ export class UsersComponent implements OnInit {
     this.uService.addUser(user);
   }
 
+  updateUser(user){
+    alert ("update user: " + user.key);
+  }
+
 }
