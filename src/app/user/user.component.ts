@@ -15,6 +15,7 @@ export class UserComponent implements OnInit {
   @Input('user-data') user: any;
   @Output('user-delete') deleteUser = new EventEmitter();
   @Output('user-add')    addUser    = new EventEmitter();
+  @Output('user-update') updateUser = new EventEmitter();
 
   constructor() { }
 
@@ -36,7 +37,7 @@ export class UserComponent implements OnInit {
   }
 
   editUser(){
-    alert ("edit");
+     this.updateUser.emit(this.user); 
   }
 
 }
