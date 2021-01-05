@@ -26,14 +26,14 @@
   display: inline-block;
   text-align: left;
   padding: 5px;
-  width: 110px;
+  width: 120px;
 }
 
 .form-group input {
   border: 1px solid;
   text-align: left;
   padding: 5px;
-  width: 150px;
+  width: 200px;
 }
 
 .btn-save {
