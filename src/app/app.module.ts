@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './services/user.service';
 import { UserComponent } from './user/user.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { UserComponent } from './user/user.component';
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule // imports firebase/firestore, only needed for database features
   ],
-  declarations: [AppComponent, UmsComponent, NavComponent, UsersComponent, UserComponent],
+  declarations: [AppComponent, UmsComponent, NavComponent, UsersComponent, UserComponent, UserDetailsComponent],
   bootstrap: [AppComponent],
   providers: [UserService]
 })
